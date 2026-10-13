@@ -1,3 +1,5 @@
+// API routes and DB logic by Trish
+
 import random
 from datetime import datetime, timezone
 from flask import Blueprint, request, jsonify
