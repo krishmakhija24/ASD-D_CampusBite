@@ -51,7 +51,7 @@ export default function Navbar({ activeTab, setActiveTab, cartCount, openCart })
             { id: 'menu', label: '🍕 Menu & Pre-Order' },
             { id: 'track', label: '🎫 Track Token' },
             { id: 'admin', label: '⚙️ Admin Desk' },
-            { id: 'devops', label: '📈 DevOps & Metrics' },
+            { id: 'devops', label: '🗄️ DevOps Architecture' },
           ].map((tab) => {
             const isActive = activeTab === tab.id;
             return (
