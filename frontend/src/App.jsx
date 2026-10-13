@@ -1,3 +1,4 @@
+// Frontend UI developed by Tanay
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import CrowdMeter from './components/CrowdMeter';
