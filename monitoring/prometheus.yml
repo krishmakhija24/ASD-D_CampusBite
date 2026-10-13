@@ -1,0 +1,24 @@
+# ==========================================
+# Prometheus Configuration - College Canteen Tracker
+# Lab Expt 7: Monitoring using Prometheus / Grafana
+# ==========================================
+
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  # Canteen Backend Metrics Scraper
+  - job_name: 'canteen-backend'
+    metrics_path: '/metrics'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['backend:5000', 'host.docker.internal:5000']
+        labels:
+          app: 'college-canteen-tracker'
+          environment: 'production'
+
+  # Prometheus Self-Monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
